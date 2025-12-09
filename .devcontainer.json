@@ -9,7 +9,8 @@
                 "esbenp.prettier-vscode",
                 "redhat.vscode-yaml",
                 "davidanson.vscode-markdownlint",
-                "mads-hartmann.bash-ide-vscode"
+                "mads-hartmann.bash-ide-vscode",
+                "eamodio.gitlens"
             ],
             "settings": {
                 "workbench.colorTheme": "Obsidian Dark",
