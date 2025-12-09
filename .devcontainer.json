@@ -1,0 +1,47 @@
+{
+    "name": "base",
+    "image":"ghcr.io/lucanori/coder-templates:latest",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "hamza-aziane.obsidian-dark",
+                "aquasecurityofficial.trivy-vulnerability-scanner",
+                "esbenp.prettier-vscode",
+                "redhat.vscode-yaml",
+                "davidanson.vscode-markdownlint",
+                "mads-hartmann.bash-ide-vscode"
+            ],
+            "settings": {
+                "workbench.colorTheme": "Obsidian Dark",
+                "files.autoSave": "afterDelay",
+                "workbench.startupEditor": "none",
+                "workbench.tips.enabled": false,
+                "workbench.editor.enablePreview": false,
+                "ansible.python.interpreterPath": "/nix/var/nix/profiles/default/bin/python3",
+                "git.autofetch": true,
+                "git.confirmSync": false,
+                "git.autoStash": true,
+                "git.enableSmartCommit": true,
+                "git.fetchOnPull": true,
+                "git.pullBeforeCheckout": true,
+                "git.rebaseWhenSync": true,
+                "search.exclude": {
+                    "**/.cache": true,
+                    "**/.git": true,
+                    "**/*.code-search": false,
+                    "**/build": true,
+                    "**/coverage": true,
+                    "**/dist": true,
+                    "**/venv": true,
+                    "**/.venv": true,
+                    "**/node_modules": true,
+                    "**/vendor": true
+                }
+            }
+        }
+    },
+    "mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+    ],
+    "remoteUser": "coder"
+}
